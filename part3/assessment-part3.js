@@ -12,8 +12,13 @@
 // with the animal as the context, and 'Trogdor' as a parameter.
 // return the result of your updateAnimal invocation
 
-// CODE HERE...
-
+callBinding = (magicAnimals, updateAnimal, id) => {
+  for (i = 0; i < magicAnimals.length; i++) {
+    if (magicAnimals[i].id === id) {
+      return updateAnimal.call(magicAnimals[i], 'Trogdor');
+    }
+  }
+}
 
 
 // *************
@@ -27,9 +32,13 @@
 // with the context of the animal, and the array ['being majestic', 'eating rainbows'] as a parameter.
 // return the result of your updateAnimal invocation
 
-// CODE HERE...
-
-
+applyBinding = (magicAnimals, updateAnimal, id) => {
+  for (var i = 0; i < magicAnimals.length; i++) {
+    if (magicAnimals[i].id === id) {
+      return updateAnimal.apply(magicAnimals[i], ['being majestic', 'eating rainbows']);
+    }
+  }
+}
 
 // *************
 // * PROBLEM 3 *
@@ -47,8 +56,9 @@
 
 var foo;
 
-// CODE HERE...
-
+promiseMe = ($q) => {
+  
+}
 
 
 // *************
@@ -63,4 +73,6 @@ var foo;
 // Make an array of emails (array of strings) from the returned data (You will need to console log or debug to figure this out),
 // and then resolve the array as you complete your promise.
 
-// CODE HERE...
+emailList = ($q, $http) => {
+  
+}
